@@ -44,7 +44,7 @@ class Queue {
     // the item after the current first item
     const node = this.first;
     this.first = node.prev;
-    
+
     //if this is the last item in the queue
     if(node === this.last){
       this.last = null;
@@ -53,3 +53,36 @@ class Queue {
     return node.value;
   }
 }
+
+function peek(queue){
+  const node = queue.first.value;
+  return node;
+}
+
+function display(queue){
+  let tempNode = queue.first;
+  let result = peek(queue);
+  while(tempNode !== queue.last){
+    tempNode = tempNode.prev;
+    result = `${tempNode.value}, ${result}`;
+  }
+  return result;
+}
+
+
+
+let starTrekQ = new Queue();
+
+function main(){
+  starTrekQ.enqueue('Kirk');
+  starTrekQ.enqueue('Spock');
+  starTrekQ.enqueue('Uhura');
+  starTrekQ.enqueue('Sulu');
+  starTrekQ.enqueue('Checkov');
+
+  //console.log(starTrekQ);
+}
+
+main();
+//console.log(peek(starTrekQ));
+console.log(display(starTrekQ));
