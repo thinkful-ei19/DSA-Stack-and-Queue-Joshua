@@ -80,6 +80,16 @@ function main(){
   starTrekQ.enqueue('Sulu');
   starTrekQ.enqueue('Checkov');
 
+  starTrekQ.dequeue();
+  starTrekQ.dequeue();
+  starTrekQ.dequeue();
+  starTrekQ.dequeue();
+  starTrekQ.dequeue();
+
+  starTrekQ.enqueue('Kirk');
+  starTrekQ.enqueue('Uhura');
+  starTrekQ.enqueue('Sulu');
+  starTrekQ.enqueue('Checkov');
   //console.log(starTrekQ);
 }
 
